@@ -20,7 +20,7 @@ export class OccurrenceService {
     where?: Prisma.OccurrenceWhereInput;
     orderBy?: Prisma.OccurrenceOrderByWithRelationInput;
   }): Promise<Occurrence[]> {
-    const { skip, take, where, orderBy } = params;
+    const { skip = 0, take = 299, where, orderBy } = params;
 
     return this.prisma.occurrence.findMany({
       skip,

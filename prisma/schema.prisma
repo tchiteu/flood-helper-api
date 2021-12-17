@@ -18,7 +18,8 @@ model User {
 
 model Occurrence {
   id Int @default(autoincrement()) @id
-  name String
+  type String
   latitude Decimal @db.Decimal(10, 8)
   longitude Decimal @db.Decimal(11, 8)
+  created DateTime @default(now())
 }
